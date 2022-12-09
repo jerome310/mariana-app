@@ -2,7 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+      screens: {
+        'mobile': '500px',
+         
+  
+        'tablet': '600px',
+        
+  
+        'desktop': '800px',
+        
+      },
   },
   plugins: [],
 }

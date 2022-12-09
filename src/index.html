@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariana App</title>
+    <!-- tailwind link -->
     <link href="/dist/output.css" rel="stylesheet">
+    <!-- alpine js script -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/e8dd0d4134.js" crossorigin="anonymous"></script>
+    <!-- hero text font link -->
+    <link rel="stylesheet" href="https://use.typekit.net/uol1rkf.css">
 </head>
 <body>
    <div class="w-full">
-    <div style="background: url('https://i.ibb.co/9v0sRH6/mariana-hero.jpg') no-repeat; background-size: cover; background-attachment:fixed; background-position: center;">
-      <nav class="bg-gradient-to-b from-[#173A24] to-transparent h-[7vh] flex items-center justify-between">
+    <div style="background-image: url('https://images.squarespace-cdn.com/content/v1/624b503dce400d19b18aa05e/1649102917091-TR7OO074ZSJAGXMTZQJZ/Stocksy_comp_1173432-reduced.jpg?format=2500w'); background-position: top center; background-repeat: no-repeat; background-size: cover;" class="h-[99vh]">
+     <nav class="bg-gradient-to-b from-[#173A24] to-transparent h-[7vh] flex items-center justify-between">
         <h1 class="font-light pl-[25px]"><a href="https://mariana-fluid-demo.squarespace.com/" target="_blank" class="text-[#ffffff] text-[27px]">mariana.</a></h1>
         <div class="flex items-center pr-[40px]">
           <i class="fa-brands fa-instagram text-[#ffffff] text-[20px] pr-[20px]"></i>
@@ -23,10 +28,10 @@
          </div>
         </div>
       </nav>
-      <!-- <section>
-          <h1>Meet our new limited collection.</h1>
-      </section> -->
+      <section @keyup.page-down.window="x-transition" class="flex items-center justify-center h-[90vh]">
+          <h1 style="font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-[#ffffff] text-[100px] text-center px-[50px] leading-[100%]">Meet our new limited collection.</h1>
+      </section>
+      <div class="h-[100vh]"></div>
     </div>
    </div> 
 </body>
-</html>
