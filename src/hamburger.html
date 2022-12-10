@@ -1,35 +1,43 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>AlpineJS Mobile Menu with Subnavigation Toggle</title>
-<link href="/dist/output.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>AlpineJS Mobile Menu with Subnavigation Toggle</title>
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
 
 <body>
+    <div style="background-image: url('https://images.squarespace-cdn.com/content/v1/624b503dce400d19b18aa05e/1649102917091-TR7OO074ZSJAGXMTZQJZ/Stocksy_comp_1173432-reduced.jpg?format=2500w'); background-position: top center; background-repeat: no-repeat; background-size: cover;"
+        class="h-[99vh]">
 
-<nav class="mobile:bg-[#BD4F0B] tablet:bg-[#ffffff] desktop:bg-[#ffffff] mobile:h-[100vh]" x-data="{ navOpen: false }">
+        <nav class="" x-data="{ navOpen: false }">
 
-    <!-- mobile menu button -->
-    <button class="p-2 text-[#ffffff] tablet:hidden focus:outline-none" aria-label="Main menu" aria-expanded="false" @click="navOpen = !navOpen" :class="{ 'bg-[none]' : navOpen }">
-        <svg class="w-8 h-8" :class="{ 'hidden' : navOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg style="transition: all 1s ease-in;" class="hidden w-8 h-8" :class="{ 'hidden' : !navOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-    </button>
+            <!-- mobile menu button -->
+            <button class="p-2 text-[#ffffff] focus:outline-none" aria-label="Main menu" aria-expanded="false"
+                @click="navOpen = !navOpen" :class="{ 'bg-[#BD4F0B] mobile:h-[100vh] mobile:w-full' : navOpen }">
+                <svg class="w-8 h-8 " :class="{ 'hidden' : navOpen }" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg style="transition: all 1s ease-in;" class="absolute top-[0] hidden w-8 h-[50px]" :class="{ 'hidden' : !navOpen }"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-    <!-- mobile menu-->
-    <div class="hidden" :class="{ 'block' : navOpen , 'hidden' : !navOpen }">
-        <!-- without children-->
-        <div class="flex w-full tablet:hidden">
-            <a href="#" class="flex-grow p-3 bg-gray-100 hover:bg-gray-200">Link</a>
-        </div>
+            <!-- mobile menu-->
+            <div :class="{ 'block' : navOpen , 'hidden' : !navOpen }">
+                <!-- without children-->
+                <div class="flex w-full">
+                    <a href="#" class="flex-grow p-3 bg-gray-100 hover:bg-gray-200">Link</a>
+                </div>
+            </div>
+
+        </nav>
     </div>
 
-</nav>
-
-<script	src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
 </body>
+
 </html>
