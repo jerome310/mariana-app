@@ -28,11 +28,35 @@
 <body>
    <div class="w-full">
     <div style="background-image: url('https://images.squarespace-cdn.com/content/v1/624b503dce400d19b18aa05e/1649102917091-TR7OO074ZSJAGXMTZQJZ/Stocksy_comp_1173432-reduced.jpg?format=2500w'); background-position: top center; background-repeat: no-repeat; background-size: cover;" class="h-[80vh] w-[100vw] bg-[black] absolute">
-     <nav class="bg-gradient-to-b from-[#173A24] to-transparent h-[10vh] flex items-center justify-between">
-      <div class="hero-text">
-         <h1 class="font-light pl-[25px]"><a href="https://mariana-fluid-demo.squarespace.com/" target="_blank" class="text-[#ffffff] text-[27px]">mariana.</a></h1>
+      <div style="background-color: transparent; background-color: rgba(0, 0, 0, 0.2); position: absolute; top: 0; bottom: 0; width: 100%; height: 80vh;"></div>
+  
+     <nav class="bg-gradient-to-b from-[#173A24] to-transparent h-[10vh] flex items-center justify-between" x-data="{ navOpen: false }">
+      
+      <!-- mobile menu button -->
+       <button class="absolute p-2 text-[#ffffff] focus:outline-none" aria-label="Main menu" aria-expanded="false"
+       @click="navOpen = !navOpen" :class="{ 'bg-[#BD4F0B] mobile:h-[100vh] mobile:w-full' : navOpen }">
+       <svg class="w-8 h-8 " :class="{ 'hidden' : navOpen }" fill="none" viewBox="0 0 24 24"
+           stroke="currentColor">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg>
+       <svg style="transition: all 1s ease-in;" class="absolute top-[0] hidden w-8 h-[50px]" :class="{ 'hidden' : !navOpen }"
+           fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+       </svg>
+   </button>
+
+   <!-- mobile menu-->
+   <div :class="{ 'block' : navOpen , 'hidden' : !navOpen }">
+       <!-- without children-->
+       <div class="flex w-full">
+           <a href="#" class="flex-grow p-3 bg-gray-100 hover:bg-gray-200">Link</a>
+       </div>
+   </div>
+   
+      <div class="hero-text w-[100%]">
+         <h1 class="font-light text-[#ffffff] text-[27px] text-center"><a href="https://mariana-fluid-demo.squarespace.com/" target="_blank">mariana.</a></h1>
       </div>
-        <div class="flex items-center pr-[40px]">
+        <div class="relative flex items-center pr-[40px]">
           <i class="fa-brands fa-instagram text-[#ffffff] text-[20px] pr-[20px]"></i>
           <i class="fa-brands fa-twitter text-[#ffffff] text-[20px]"></i>
          <div class="pl-[40px]">
@@ -42,9 +66,8 @@
         </div>
       </nav>
       <section class="flex items-center justify-center h-[70vh] hero-text">
-         <div style="background-color: transparent; background-color: rgba(0, 0, 0, 0.2); position: absolute; top: 0; bottom: 0; width: 100%; height: 80vh;"></div>
           <div class="text-center">
-         <h1 style="position: absolute; font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-[#ffffff] text-[90px] px-[70px] leading-[100%]">Meet our new limited collection.</h1>
+         <h1 style=" font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-[#ffffff] text-[90px] px-[70px] leading-[100%]">Meet our new limited collection.</h1>
          <p class="text-[#ffffff] text-[25px] font-light pt-[25px]">AVAILABLE NOW</p>
           </div>
       </section>
@@ -54,6 +77,7 @@
    <script>
       function heroText() {
          let phoneRow = document.querySelectorAll(".hero-text");
+         let p2 = document.querySelector('.p-2');
 
            phoneRow.forEach((phones)=>{
             let phonePosition = phones.getBoundingClientRect().top;
@@ -64,5 +88,7 @@
            })
        }
        window.addEventListener("load", heroText);
+
+       console.log('p-2')
    </script>
 </body>
