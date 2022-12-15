@@ -99,22 +99,14 @@
             //let hamburger = document.querySelector('.hamburger-icon');
 
             window.addEventListener('DOMContentLoaded', (event) => {
-                if(window.style.width = '550px'){
-
+                if(window.style.width >= '620px'){
+                   button.remove();
+                   console.log(button)
                 }
-            });
-   
-              phoneRow.forEach((phones)=>{
-               let phonePosition = phones.getBoundingClientRect().top;
-               let phoneScroll = window.innerHeight;
-               if (phonePosition < phoneScroll) {
-                  phones.classList.add("phonesAppear");
-                 }
-              })
-          }
-          window.addEventListener("load", heroText);
+            });  
+          } 
 
-          
+          navWindow();
       </script>
     </div>
 </body>
