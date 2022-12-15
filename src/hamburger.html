@@ -26,26 +26,26 @@
 </head>
 
 <body>
-    <div style="background-image: url('https://images.squarespace-cdn.com/content/v1/624b503dce400d19b18aa05e/1649102917091-TR7OO074ZSJAGXMTZQJZ/Stocksy_comp_1173432-reduced.jpg?format=2500w'); background-position: top center; background-repeat: no-repeat; background-size: cover;" class="h-[80vh] w-[100vw] bg-[black] absolute">
-        <div style="background-color: transparent; background-color: rgba(0, 0, 0, 0.2); position: absolute; top: 0; bottom: 0; width: 100%; height: 80vh;"></div>
+    <div style="background-image: url('https://images.squarespace-cdn.com/content/v1/624b503dce400d19b18aa05e/1649102917091-TR7OO074ZSJAGXMTZQJZ/Stocksy_comp_1173432-reduced.jpg?format=2500w'); background-position: center; background-repeat: no-repeat; background-size: cover;" class="h-[80vh] w-[100vw] bg-[black] absolute desktop:h-[90vh]">
+        <div style="background-color: transparent; background-color: rgba(0, 0, 0, 0.2); position: absolute; top: 0; bottom: 0; width: 100%;" class="mobile:h-[80vh] desktop:h-[90vh]"></div>
 
         <nav class="bg-gradient-to-b from-[#173A24] to-transparent mobile:h-[15vh] mobile:flex mobile:items-center h-[10vh]" x-data="{ navOpen: false }">
 
             <!-- mobile menu button -->
-            <button class="p-2 text-[#ffffff] flex items-center justify-between w-[100%]" aria-label="Main menu" aria-expanded="false"
+            <button class="p-2 text-[#ffffff] flex items-center justify-between w-[100%] button" aria-label="Main menu" aria-expanded="false"
                 @click="navOpen = !navOpen" :class="{ 'z-50 bg-[#BD4F0B] mobile:h-[200vh] mobile:w-full' : navOpen }">
-                <svg class="relative h-12 w-[32px] tablet:hidden" :class="{ 'hidden' : navOpen }" fill="none" viewBox="0 0 24 24"
+                <svg class="relative h-12 w-[60px] tablet:hidden pl-[5%] hamburger-icon" :class="{ 'hidden' : navOpen }" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <svg style="transition: all 1s ease-in;" class="relative top-[0] hidden w-8 h-[50px]" :class="{ 'hidden' : !navOpen }"
+                <svg style="transition: all 1s ease-in;" class="relative top-[0] hidden w-[60px] h-[50px] pl-[5%]" :class="{ 'hidden' : !navOpen }"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                <div class="hero-text w-[50%] mobile:ml-[15%] tablet:ml-[10%] text-center">
+                <div class="hero-text w-[50%] mobile:ml-[15%] tablet:ml-[10%] text-center tablet:text-left">
                     <h1 class="font-light text-[#ffffff] text-[27px]" :class="{ 'hidden' : navOpen }"><a href="https://mariana-fluid-demo.squarespace.com/" target="_blank">mariana.</a></h1>
                  </div>
-                   <div class="relative pr-[40px]">
+                   <div class="flex items-center relative pr-[40px] tablet:w-[18%]">
                      <div class="tablet:flex mobile:hidden">
                      <i class="fa-brands fa-instagram text-[#ffffff] text-[20px] pr-[20px]"></i>
                      <i class="fa-brands fa-twitter text-[#ffffff] text-[20px]"></i>
@@ -60,7 +60,7 @@
             <!-- mobile menu-->
             <div :class="{ 'block' : navOpen , 'hidden' : !navOpen }">
                 <!-- without children-->
-                <!-- <div class="flex w-full ">
+                <!-- <div class="w-full">
                     <a href="#" class="flex-grow p-3 bg-gray-100 hover:bg-gray-200">Link</a>
                 </div> -->
             </div>
@@ -70,7 +70,7 @@
          
          <section class="flex items-center justify-center h-[70vh] hero-text">
              <div class="text-center">
-            <h1 style=" font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-[#ffffff] text-[90px] px-[70px] leading-[100%]">Meet our new limited collection.</h1>
+            <h1 style=" font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-[#ffffff] text-[90px] px-[70px] leading-[100%] mobile:px-[0px]">Meet our new limited collection.</h1>
             <p class="text-[#ffffff] text-[25px] font-light pt-[25px]">AVAILABLE NOW</p>
              </div>
          </section>
@@ -78,8 +78,9 @@
        
       </div>
       <script>
+         // Text appearing
          function heroText() {
-            let phoneRow = document.querySelectorAll(".hero-text");
+            let phoneRow = document.querySelectorAll('.hero-text');
             let p2 = document.querySelector('.p-2');
    
               phoneRow.forEach((phones)=>{
@@ -91,6 +92,27 @@
               })
           }
           window.addEventListener("load", heroText);
+          
+         // Drag Window Feature
+         function navWindow() {
+            let button = document.querySelector('.button');
+            //let hamburger = document.querySelector('.hamburger-icon');
+
+            window.addEventListener('DOMContentLoaded', (event) => {
+                
+            });
+   
+              phoneRow.forEach((phones)=>{
+               let phonePosition = phones.getBoundingClientRect().top;
+               let phoneScroll = window.innerHeight;
+               if (phonePosition < phoneScroll) {
+                  phones.classList.add("phonesAppear");
+                 }
+              })
+          }
+          window.addEventListener("load", heroText);
+
+          
       </script>
     </div>
 </body>
