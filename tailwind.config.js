@@ -6,10 +6,10 @@ module.exports = {
         'mobile': '500px',
          
   
-        'tablet': '600px',
+        'tablet': '900px',
         
   
-        'desktop': '800px',
+        'desktop': '1200px',
         
       },
   },
