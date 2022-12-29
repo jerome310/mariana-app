@@ -512,3 +512,279 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-\[10vh\] {
+  height: 10vh;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-\[black\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#BD4F0A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(189 79 10 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-\[\#173A24\] {
+  --tw-gradient-from: #173A24;
+  --tw-gradient-to: rgb(23 58 36 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-transparent {
+  --tw-gradient-to: transparent;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.px-\[70px\] {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.py-\[7px\] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pr-\[40px\] {
+  padding-right: 40px;
+}
+
+.pr-\[20px\] {
+  padding-right: 20px;
+}
+
+.pl-\[40px\] {
+  padding-left: 40px;
+}
+
+.pr-\[10px\] {
+  padding-right: 10px;
+}
+
+.pt-\[25px\] {
+  padding-top: 25px;
+}
+
+.pb-\[15px\] {
+  padding-bottom: 15px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-\[27px\] {
+  font-size: 27px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.text-\[25px\] {
+  font-size: 25px;
+}
+
+.text-\[90px\] {
+  font-size: 90px;
+}
+
+.text-\[35px\] {
+  font-size: 35px;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.leading-\[100\%\] {
+  line-height: 100%;
+}
+
+.text-\[\#ffffff\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#BD4F0A\] {
+  --tw-text-opacity: 1;
+  color: rgb(189 79 10 / var(--tw-text-opacity));
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 500px) {
+  .mobile\:ml-\[15\%\] {
+    margin-left: 15%;
+  }
+
+  .mobile\:flex {
+    display: flex;
+  }
+
+  .mobile\:h-\[80vh\] {
+    height: 80vh;
+  }
+
+  .mobile\:h-\[15vh\] {
+    height: 15vh;
+  }
+
+  .mobile\:h-\[85vh\] {
+    height: 85vh;
+  }
+
+  .mobile\:w-\[60\%\] {
+    width: 60%;
+  }
+
+  .mobile\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .mobile\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .mobile\:flex-col {
+    flex-direction: column;
+  }
+
+  .mobile\:items-center {
+    align-items: center;
+  }
+
+  .mobile\:px-\[0px\] {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 600px) {
+  .tablet\:ml-\[10\%\] {
+    margin-left: 10%;
+  }
+
+  .tablet\:flex {
+    display: flex;
+  }
+
+  .tablet\:h-\[95vh\] {
+    height: 95vh;
+  }
+
+  .tablet\:w-\[18\%\] {
+    width: 18%;
+  }
+
+  .tablet\:w-\[30\%\] {
+    width: 30%;
+  }
+
+  .tablet\:flex-row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 800px) {
+  .desktop\:h-\[90vh\] {
+    height: 90vh;
+  }
+
+  .desktop\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .desktop\:w-\[20\%\] {
+    width: 20%;
+  }
+
+  .desktop\:w-\[30\%\] {
+    width: 30%;
+  }
+
+  .desktop\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .desktop\:justify-center {
+    justify-content: center;
+  }
+}
