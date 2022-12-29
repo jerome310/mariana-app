@@ -2,8 +2,9 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
+    extend: {
       screens: {
-        'mobile': '300px',
+        'mobile': '500px',
          
   
         'tablet': '600px',
@@ -12,6 +13,7 @@ module.exports = {
         'desktop': '800px',
         
       },
+    },
   },
   plugins: [],
 }
