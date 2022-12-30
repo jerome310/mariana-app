@@ -31,8 +31,38 @@
       .darkshade {
         height: 50vh;
       }
+      .social-icons {
+        width: 30%;
+      }
       .hero-section {
         height: 52vh;
+      }
+      .logo {
+        font-size: 45px;
+      }
+      .awesome-icons i {
+        font-size: 35px;
+      }
+      .awesome-shopping-section {
+        display: flex;
+        align-items: center;
+      }
+      .awesome-shopping-section i {
+        font-size: 35px;
+      }
+      .awesome-shopping-section span {
+        font-size: 35px;
+      }
+      .hero-column-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
+      }
+      .hero-column {
+        width: 90%;
+      }
+      .terra-text {
+        font-size: 50px;
       }
     }
   </style>
@@ -50,15 +80,15 @@
       class="bg-gradient-to-b from-[#173A24] to-transparent mobile:h-[15vh] mobile:flex mobile:items-center h-[10vh]">
 
       <div class="mobile:w-[60%] hero-text desktop:w-[80%] mobile:ml-[10%] tablet:ml-[10%] text-left">
-        <h1 class="font-light text-[#ffffff] text-[27px]"><a href="https://mariana-fluid-demo.squarespace.com/"
+        <h1 class="logo font-light text-[#ffffff] text-[27px]"><a href="https://mariana-fluid-demo.squarespace.com/"
             target="_blank">mariana.</a></h1>
       </div>
-      <div class="flex items-center relative pr-[40px] tablet:w-[18%] desktop:w-[20%]">
-        <div class="mobile:flex">
+      <div class="social-icons flex items-center relative pr-[40px] tablet:w-[18%] desktop:w-[20%]">
+        <div class="awesome-icons mobile:flex">
           <i class="fa-brands fa-instagram text-[#ffffff] text-[20px] pr-[20px]"></i>
           <i class="fa-brands fa-twitter text-[#ffffff] text-[20px]"></i>
         </div>
-        <div class="pl-[40px] flex">
+        <div class="awesome-shopping-section pl-[40px] flex mobile">
           <i class="fa-sharp fa-solid fa-bag-shopping text-[#ffffff] pr-[10px] text-[25px]"></i>
           <span class="text-[20px]">0</span>
         </div>
@@ -74,11 +104,11 @@
       </div>
     </section>
 
-    <div class="h-[100vh] tablet:flex tablet:flex-row desktop:justify-center mobile:flex-col">
-      <div style="margin: 0 auto 30px;" class="desktop:w-[30%] mobile:w-[90%] tablet:w-[30%]">
+    <div class="hero-column-section h-[100vh] tablet:flex tablet:flex-row desktop:justify-center mobile:flex-col">
+      <div style="margin: 0 auto 30px;" class="hero-column desktop:w-[30%] mobile:w-[90%] tablet:w-[30%]">
         <a href="#"><img class="desktop:w-[100%] mobile:w-[100%]" src="https://i.ibb.co/G9LYbBw/terra-chunk.jpg"
             alt="terra-chunk" border="0"></a>
-        <h2 class="text-[#BD4F0A] desktop: text-[35px] mobile: text-[25px]">Terra chunk</h2>
+        <h2 class="terra-text text-[#BD4F0A] desktop: text-[35px] mobile: text-[25px]">Terra chunk</h2>
         <p class="text-[18px] pb-[15px]">$129</p>
         <a href="#" class="bg-[#BD4F0A] text-[#ffffff] py-[7px] px-[15px] rounded-[20px]">shop now</a>
       </div>
