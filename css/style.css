@@ -691,6 +691,14 @@ video {
   line-height: 100%;
 }
 
+.leading-10 {
+  line-height: 2.5rem;
+}
+
+.leading-\[1\] {
+  line-height: 1;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -722,6 +730,18 @@ video {
 
   .md\:h-\[95vh\] {
     height: 95vh;
+  }
+
+  .md\:h-\[70vh\] {
+    height: 70vh;
+  }
+
+  .md\:h-\[80vh\] {
+    height: 80vh;
+  }
+
+  .md\:h-\[83vh\] {
+    height: 83vh;
   }
 
   .md\:w-\[18\%\] {
