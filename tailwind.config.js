@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./*.html"],
   theme: {
+<<<<<<< HEAD
       screens: {
         'mobile': '500px',
          
@@ -12,6 +13,9 @@ module.exports = {
         'desktop': '1200px',
         
       },
+=======
+    extend: {},
+>>>>>>> b448ef5f822d41f269a178c150a6f601430b58a1
   },
   plugins: [],
 }
