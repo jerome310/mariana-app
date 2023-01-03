@@ -553,8 +553,24 @@ video {
   height: 85vh;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-\[50\%\] {
   width: 50%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-\[94vw\] {
+  width: 94vw;
+}
+
+.w-\[10vw\] {
+  width: 10vw;
 }
 
 .transform {
@@ -788,6 +804,10 @@ video {
     height: 95vh;
   }
 
+  .lg\:h-\[100vh\] {
+    height: 100vh;
+  }
+
   .lg\:w-\[70\%\] {
     width: 70%;
   }
@@ -798,6 +818,10 @@ video {
 
   .lg\:w-\[80\%\] {
     width: 80%;
+  }
+
+  .lg\:w-screen {
+    width: 100vw;
   }
 
   .lg\:pt-2\.5 {
