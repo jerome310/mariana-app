@@ -1,9 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>AlpineJS Mobile Menu with Subnavigation Toggle</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <!-- tailwind link -->
   <link rel="stylesheet" href="/css/style.css" />
   <!-- alpine js script -->
@@ -28,68 +30,63 @@
 
 <body>
   <div
-    style="background-image: url('https://images.squarespace-cdn.com/content/v1/624b503dce400d19b18aa05e/1649102917091-TR7OO074ZSJAGXMTZQJZ/Stocksy_comp_1173432-reduced.jpg?format=2500w'); background-position: center; background-repeat: no-repeat; background-size: cover;"
-    class="h-[80vh] w-100 bg-[black] absolute lg:h-[90vh]">
-    <div
-      style="background-color: transparent; background-color: rgba(0, 0, 0, 0.2); position: absolute; top: 0; bottom: 0; width: 100%;"
-      class="darkshade h-[80vh] lg:h-[90vh]"></div>
+  style="background-image: url('https://images.squarespace-cdn.com/content/v1/624b503dce400d19b18aa05e/1649102917091-TR7OO074ZSJAGXMTZQJZ/Stocksy_comp_1173432-reduced.jpg?format=2500w'); background-position: center; background-repeat: no-repeat; background-size: cover;"
+  class="h-[80vh] w-100 2xl:w-100 bg-[black] lg:h-[90vh]">
 
-    <nav style="position: fixed; top: 0; width: 100%; z-index: 999;"
-      class="bg-gradient-to-b from-[#173A24] to-transparent h-[15vh] flex items-center h-[10vh]">
+  <div
+    style="background-color: transparent; background-color: rgba(0, 0, 0, 0.2); position: absolute; top: 0; bottom: 0; width: 100%;"
+    class="h-[80vh] lg:h-[90vh]"></div>
 
-      <div class="min-[200px]:w-[40%] hero-text lg:w-[80%] ml-[10%] md:ml-[10%] text-left">
-        <h1 class="logo font-light text-white text-[35px] text-[27px]"><a href="https://mariana-fluid-demo.squarespace.com/"
-            target="_blank">mariana.</a></h1>
-      </div>
-      <div class="social-icons flex items-center relative pr-[40px] md:w-[18%] lg:w-[20%]">
-        <div class="flex awesome-icons">
-          <i class="fa-brands fa-instagram text-white text-[20px] pr-[20px]"></i>
-          <i class="fa-brands fa-twitter text-white text-[20px]"></i>
-        </div>
-        <div class="awesome-shopping-section pl-[40px] flex mobile">
-          <i class="fa-sharp fa-solid fa-bag-shopping text-white pr-[10px] text-[25px]"></i>
-          <span class="text-[20px]">0</span>
-        </div>
-      </div>
-    </nav>
-    
-    <section class="flex items-center justify-center md:h-[83vh] h-[85vh] hero-text">
-      <div class="text-center">
-        <h1 style=" font-family: degular, sans-serif; font-weight: 400; font-style: normal;"
-          class="text-white text-[90px] px-[70px] leading-[1]">Meet our new limited
-          collection.</h1>
-        <p class="text-white text-[25px] font-light pt-[25px]">AVAILABLE NOW</p>
-      </div>
-    </section>
+  <nav style="position: fixed; top: 0; width: 100%; z-index: 999;"
+    class="bg-gradient-to-b from-[#173A24] to-transparent lg:h-[18vh] flex items-center h-[15vh]">
 
-    <div class="text-center py-20">
-      <a href="extra-code.html">Click button</a>
+    <div class="w-[50%] hero-text md:w-[63%] lg:w-[70%] ml-[10%] md:ml-[10%] text-left lg:pt-2.5">
+      <h1 class="logo font-light text-white lg:text-[35px] text-[27px]"><a
+          href="https://mariana-fluid-demo.squarespace.com/" target="_blank">mariana.</a></h1>
     </div>
-
-    <div class="flex flex-col items-center justify-center px-10 space-y-10 md:flex-row md:space-y-0 md:space-x-5">
-      <div class="">
-          <a href="#"><img class="" src="https://i.ibb.co/G9LYbBw/terra-chunk.jpg"
-              alt="terra-chunk"></a>
-          <h2 class="terra-text text-[#BD4F0A] lg:text-[35px]  text-[25px]">Terra chunk</h2>
-          <p class="text-[18px] pb-[15px]">$129</p>
-          <a href="#" class="bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop now</a>
-        </div>
-        <div class="">
-          <a href="#"><img class="" src="https://i.ibb.co/G9LYbBw/terra-chunk.jpg"
-              alt="terra-chunk"></a>
-          <h2 class="text-[#BD4F0A] lg:text-[35px] text-[25px]">Terra chunk</h2>
-          <p class="text-[18px] pb-[15px]">$129</p>
-          <a href="#" class="bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop now</a>
-        </div>
-        <div class="">
-          <a href="#"><img class="" src="https://i.ibb.co/G9LYbBw/terra-chunk.jpg"
-              alt="terra-chunk"></a>
-          <h2 class="text-[#BD4F0A] lg:text-[35px] text-[25px]">Terra chunk</h2>
-          <p class="text-[18px] pb-[15px]">$129</p>
-          <a href="#" class="bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop now</a>
-        </div>
+    <div class="flex items-center relative pr-[40px] md:w-[18%] lg:w-[20%] pt-2.5">
+      <div class="flex">
+        <i class="fa-brands fa-instagram text-white text-[20px] pr-[20px]"></i>
+        <i class="fa-brands fa-twitter text-white text-[20px]"></i>
       </div>
+      <div class="pl-[40px] flex mobile">
+        <i class="fa-sharp fa-solid fa-bag-shopping text-white pr-[10px] text-[25px]"></i>
+        <span class="text-[20px]">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="flex items-center justify-center h-[83vh] lg:h-[95vh] hero-text pt-9 lg:w-screen">
+    <div class="text-center">
+      <h1 style=" font-family: degular, sans-serif; font-weight: 400; font-style: normal;"
+        class="text-white text-6xl lg:text-[90px] leading-[1]">Meet our new limited
+        collection.</h1>
+      <p class="text-white text-[25px] font-light pt-[25px]">AVAILABLE NOW</p>
+    </div>
+  </section>
+
+  <div class="flex flex-col items-center justify-center px-10 space-y-10 md:flex-row md:space-y-0 md:space-x-5 ">
+    <div class="font-light">
+      <a href="#"><img src="https://i.ibb.co/G9LYbBw/terra-chunk.jpg" alt="terra-chunk"></a>
+      <h2 class="terra-text text-[#BD4F0A] lg:text-[35px]  text-[25px]">Terra chunk</h2>
+      <p class="text-[18px] pb-[15px]">$129</p>
+      <a href="#" class="hover:bg-white hover:text-[#BD4F0A] hover:border hover:border-[#BD4F0A] bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop now</a>
+    </div>
+    <div class="font-light">
+      <a href="#"><img src="https://i.ibb.co/tpFL50K/naranja-heel.jpg" alt="terra-chunk"></a>
+      <h2 class="text-[#BD4F0A] lg:text-[35px] text-[25px]">Naranja heel</h2>
+      <p class="text-[18px] pb-[15px]">$129</p>
+      <a href="#" class="hover:bg-white hover:text-[#BD4F0A] hover:border hover:border-[#BD4F0A] bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop now</a>
+    </div>
+    <div class="font-light">
+      <a href="#"><img src="https://i.ibb.co/TmBgQ7n/chiquita-heel.jpg" alt="terra-chunk"></a>
+      <h2 class="text-[#BD4F0A] lg:text-[35px] text-[25px]">Terra chunk</h2>
+      <p class="text-[18px] pb-[15px]">$129</p>
+      <a href="#" class="hover:bg-white hover:text-[#BD4F0A] hover:border hover:border-[#BD4F0A] bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop now</a>
+    </div>
   </div>
+</div>
+
 
   <script>
     // Text appearing
@@ -107,7 +104,7 @@
     }
     window.addEventListener("load", heroText);
 
-         // Drag Window Feature, come back to this feature         
+             // Drag Window Feature, come back to this feature         
 
 
   </script>
