@@ -20,6 +20,13 @@
       transform: translateY(50px);
       transition: 0.5s all ease-in-out;
     }
+    
+    
+    .col-group {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 0.5s all ease-in-out;
+    }
 
     .phonesAppear {
       opacity: 1;
@@ -66,7 +73,7 @@
     </section>
 
     <div class="flex flex-col items-center justify-center px-10 space-y-10 md:flex-row md:space-y-0 md:space-x-5 ">
-      <div class="font-light">
+      <div class="font-light col-group">
         <a href="#"><img src="https://i.ibb.co/G9LYbBw/terra-chunk.jpg" alt="terra-chunk"></a>
         <h2 class="terra-text text-[#BD4F0A] lg:text-[35px]  text-[25px]">Terra chunk</h2>
         <p class="text-[18px] pb-[15px]">$129</p>
@@ -74,7 +81,7 @@
           class="hover:bg-white hover:text-[#BD4F0A] hover:border hover:border-[#BD4F0A] bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop
           now</a>
       </div>
-      <div class="font-light">
+      <div class="font-light col-group">
         <a href="#"><img src="https://i.ibb.co/tpFL50K/naranja-heel.jpg" alt="terra-chunk"></a>
         <h2 class="text-[#BD4F0A] lg:text-[35px] text-[25px]">Naranja heel</h2>
         <p class="text-[18px] pb-[15px]">$129</p>
@@ -82,7 +89,7 @@
           class="hover:bg-white hover:text-[#BD4F0A] hover:border hover:border-[#BD4F0A] bg-[#BD4F0A] text-white py-[7px] px-[15px] rounded-[20px]">shop
           now</a>
       </div>
-      <div class="font-light">
+      <div class="font-light col-group">
         <a href="#"><img src="https://i.ibb.co/TmBgQ7n/chiquita-heel.jpg" alt="terra-chunk"></a>
         <h2 class="text-[#BD4F0A] lg:text-[35px] text-[25px]">Terra chunk</h2>
         <p class="text-[18px] pb-[15px]">$129</p>
@@ -93,22 +100,27 @@
     </div>
 
     <div>
-      <img style="width: 1519px; height: 268px; object-position: 49.7424% 27.4241%; object-fit: cover; background-position: top center; background-repeat: no-repeat; background-size: cover" class="mt-16"
-        src="https://i.ibb.co/hYFRRB2/middle-section-img.jpg" alt="heels and fruit">
+      <img style="width: 100%; height: 50vh; object-position: 49.7424% 27.4241%; object-fit: cover; background-position: top center; background-repeat: no-repeat; background-size: cover;" class="mt-16"
+        src="/img/heels_fruit.jpeg" alt="heels and fruit">
     </div>
 
-    <div class="mt-16">
-      <h1>dfvknfdvjfjvgv</h1>
+    <div class="flex flex-col lg:flex-row">
+      <div class="">
+        <h1 style="font-family: degular, sans-serif; font-weight: 400; font-style: normal;"
+        class="hero-text text-[#BD4F0A] text-6xl lg:text-8xl lg:pt-24 text-center ">Slow fashion made in small batches.</h1>
+      </div>
+      <div>
+        <img style="width: 458.83px; height: 306px;" class="m-auto w-[30%]" src="https://i.ibb.co/5kqrKDv/orange-heel.jpg" alt="orange-heel" border="0" alt="orange heel">
+      </div>
     </div>
 
   </div>
 
 
   <script>
-    // Text appearing
+    // Hero Text appearing
     function heroText() {
       let phoneRow = document.querySelectorAll('.hero-text');
-      let p2 = document.querySelector('.p-2');
 
       phoneRow.forEach((phones) => {
         let phonePosition = phones.getBoundingClientRect().top;
@@ -119,6 +131,19 @@
       })
     }
     window.addEventListener("load", heroText);
+    
+    function ColumnGroup() {
+      let phoneRow = document.querySelectorAll('.col-group');
+
+      phoneRow.forEach((phones) => {
+        let phonePosition = phones.getBoundingClientRect().top;
+        let phoneScroll = window.innerHeight;
+        if (phonePosition < phoneScroll) {
+          phones.classList.add("phonesAppear");
+        }
+      })
+    }
+    window.addEventListener("scroll", ColumnGroup);
 
              // Drag Window Feature, come back to this feature         
 
