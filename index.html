@@ -14,20 +14,32 @@
   <script src="https://kit.fontawesome.com/e8dd0d4134.js" crossorigin="anonymous"></script>
   <!-- hero text font link -->
   <link rel="stylesheet" href="https://use.typekit.net/uol1rkf.css">
+  <!-- Slow Fashion google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     .hero-text {
       opacity: 0;
       transform: translateY(50px);
       transition: 0.5s all ease-in-out;
     }
-    
-    
+
     .col-group {
       opacity: 0;
       transform: translateY(50px);
       transition: 0.5s all ease-in-out;
     }
 
+    .fashion-slider {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: 0.5s all ease-in-out;
+    }
+
+    .fashionAppear {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    
     .phonesAppear {
       opacity: 1;
       transform: translateY(0px);
@@ -100,18 +112,32 @@
     </div>
 
     <div>
-      <img style="width: 100%; height: 50vh; object-position: 49.7424% 27.4241%; object-fit: cover; background-position: top center; background-repeat: no-repeat; background-size: cover;" class="mt-16"
-        src="/img/heels_fruit.jpeg" alt="heels and fruit">
+      <img
+        style="width: 100%; height: 50vh; object-position: 49.7424% 27.4241%; object-fit: cover; background-position: top center; background-repeat: no-repeat; background-size: cover;"
+        class="mt-16" src="/img/heels_fruit.jpeg" alt="heels and fruit">
     </div>
 
-    <div class="flex flex-col lg:flex-row">
-      <div class="">
+    <div class="flex flex-col mx-auto mt-24 lg:items-center lg:w-10/12 lg:flex-row">
+      <div class="col-group">
         <h1 style="font-family: degular, sans-serif; font-weight: 400; font-style: normal;"
-        class="hero-text text-[#BD4F0A] text-6xl lg:text-8xl lg:pt-24 text-center ">Slow fashion made in small batches.</h1>
+          class="text-[#BD4F0A] text-6xl lg:text-8xl  text-center lg:text-left lg:pl-20">Slow fashion made in small batches.</h1>
       </div>
-      <div>
-        <img style="width: 458.83px; height: 306px;" class="m-auto w-[30%]" src="https://i.ibb.co/5kqrKDv/orange-heel.jpg" alt="orange-heel" border="0" alt="orange heel">
+      <div class="w-[100%] fashion-slider">
+        <img style="width: 80%; height: 100%;" class="m-auto w-[30%]" src="https://i.ibb.co/5kqrKDv/orange-heel.jpg"
+          alt="orange-heel" border="0" alt="orange heel">
       </div>
+    </div>
+
+    <div class="col-group">
+      <p style="font-family: 'Figtree', sans-serif;" class="px-[14%] pt-20 font-thin text-center lg:text-2xl">
+        It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something
+        more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story
+        online can make all the difference.
+
+        Don’t worry about sounding professional. Sound like you. There are over 1.5 billion websites out there, but your
+        story is what’s going to separate this one from the rest. If you read the words back and don’t hear your own
+        voice in your head, that’s a good sign you still have more work to do.
+      </p>
     </div>
 
   </div>
@@ -131,7 +157,7 @@
       })
     }
     window.addEventListener("load", heroText);
-    
+
     function ColumnGroup() {
       let phoneRow = document.querySelectorAll('.col-group');
 
@@ -144,6 +170,19 @@
       })
     }
     window.addEventListener("scroll", ColumnGroup);
+    
+    function fashionSlider() {
+      let phoneRow = document.querySelectorAll('.fashion-slider');
+
+      phoneRow.forEach((phones) => {
+        let phonePosition = phones.getBoundingClientRect().top;
+        let phoneScroll = window.innerHeight;
+        if (phonePosition < phoneScroll) {
+          phones.classList.add("fashionAppear");
+        }
+      })
+    }
+    window.addEventListener("scroll", fashionSlider);
 
              // Drag Window Feature, come back to this feature         
 
