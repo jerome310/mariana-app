@@ -15,7 +15,11 @@
   <!-- hero text font link -->
   <link rel="stylesheet" href="https://use.typekit.net/uol1rkf.css">
   <!-- Slow Fashion google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
     .hero-text {
       opacity: 0;
@@ -39,7 +43,7 @@
       opacity: 1;
       transform: translateY(0px);
     }
-    
+
     .phonesAppear {
       opacity: 1;
       transform: translateY(0px);
@@ -117,19 +121,19 @@
         class="mt-16" src="/img/heels_fruit.jpeg" alt="heels and fruit">
     </div>
 
-    <div class="flex flex-col mx-auto mt-24 lg:items-center lg:w-10/12 lg:flex-row">
-      <div class="col-group">
+    <div class="flex flex-col mx-auto lg:mt-24 lg:items-center lg:w-10/12 lg:flex-row">
+      <div class="my-8 col-group">
         <h1 style="font-family: degular, sans-serif; font-weight: 400; font-style: normal;"
-          class="text-[#BD4F0A] text-6xl lg:text-8xl  text-center lg:text-left lg:pl-20">Slow fashion made in small batches.</h1>
+          class="text-[#BD4F0A] text-6xl lg:text-8xl text-center lg:text-left lg:pl-20">Slow fashion made in small batches.</h1>
       </div>
       <div class="w-[100%] fashion-slider">
-        <img style="width: 80%; height: 100%;" class="m-auto w-[30%]" src="https://i.ibb.co/5kqrKDv/orange-heel.jpg"
+        <img class="md:w-[60%] lg:w-[80%] lg:h-full m-auto w-[75%]" src="https://i.ibb.co/5kqrKDv/orange-heel.jpg"
           alt="orange-heel" border="0" alt="orange heel">
       </div>
     </div>
 
     <div class="col-group">
-      <p style="font-family: 'Figtree', sans-serif;" class="px-[14%] pt-20 font-thin text-center lg:text-2xl">
+      <p style="font-family: 'Figtree', sans-serif;" class="px-9 lg:px-[14%] pt-8 lg:pt-20 font-thin text-center lg:text-2xl">
         It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something
         more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story
         online can make all the difference.
@@ -155,6 +159,7 @@
           phones.classList.add("phonesAppear");
         }
       })
+
     }
     window.addEventListener("load", heroText);
 
@@ -170,17 +175,15 @@
       })
     }
     window.addEventListener("scroll", ColumnGroup);
-    
-    function fashionSlider() {
-      let phoneRow = document.querySelectorAll('.fashion-slider');
 
-      phoneRow.forEach((phones) => {
-        let phonePosition = phones.getBoundingClientRect().top;
+    function fashionSlider() {
+      let phoneRow = document.querySelector('.fashion-slider');
+
+        let phonePosition = phoneRow.getBoundingClientRect().top;
         let phoneScroll = window.innerHeight;
         if (phonePosition < phoneScroll) {
-          phones.classList.add("fashionAppear");
+          phoneRow.classList.add("fashionAppear");
         }
-      })
     }
     window.addEventListener("scroll", fashionSlider);
 
