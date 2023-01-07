@@ -48,6 +48,14 @@
       opacity: 1;
       transform: translateY(0px);
     }
+
+     input[type="text"]::placeholder
+    {   
+      text-align: left;
+      position: relative; 
+      left: 40px;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 
@@ -177,12 +185,15 @@
       </div>
     </div>
 
-    <div class="bg-[#023120] py-16">
-      <div>
+    <div class="bg-[#023120] py-16 flex flex-col lg:flex-row justify-center">
+      <div class="w-1/2">
         <img class="w-[500px] height-[250px]" src="/img/box_lady.jpeg" alt="lady inside a box">
       </div>
-      <div>
-        
+      <div class="w-[30%] text-white">
+        <h1 style="font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-6xl">Stay in the loop.</h1>
+        <p class="py-8">Get notified when our next collection drops.</p>
+        <input style="font-family: degular, sans-serif; font-weight: 100; font-style: normal;" class="py-5 w-[60%] text-left" type="text" placeholder="Email Address">
+        <a href="#" class="bg-[#BD4F0A] px-5 py-5 rounded-full">Sign Up</a>
       </div>
     </div>
 
