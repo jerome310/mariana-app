@@ -244,9 +244,19 @@
     }
     window.addEventListener("scroll", fashionSlider);
 
-             // Drag Window Feature, come back to this feature         
+    // Footer Email Authenification
+      let input = document.querySelector("input");
+      let register = document.querySelector('.register-button');
 
-
+      register.addEventListener('click', function () {
+        if (input.value.includes("@")) {
+          alert('Thank you for registering.')
+          input.value = ""
+        } else if (input.value != '@') {
+          alert('Please provide @ to submit request.')
+          input.value = ""
+        }
+      })
   </script>
 </body>
 
