@@ -189,16 +189,11 @@
       <div class="md:w-full lg:w-1/2">
         <img class="w-[500px] height-[250px] md:w-full md:height-[250px] lg:w-[500px] lg:height-[250px]" src="/img/box_lady.jpeg" alt="lady inside a box">
       </div>
-<<<<<<< HEAD
-      <div class="w-[30%] text-white bg-[red]">
-        <h1 style="font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-6xl">Stay in the loop.</h1>
-=======
       <div class="md:w-full lg:w-[30%] text-white text-center lg:text-left lg:pb-0 pb-5">
         <h1 style="font-family: degular, sans-serif; font-weight: 400; font-style: normal;" class="text-6xl lg:pt-0 pt-1.5">Stay in the loop.</h1>
->>>>>>> a47c90f525c16269917494a2cb700ac765f13868
         <p class="py-8">Get notified when our next collection drops.</p>
-        <input style="font-family: degular, sans-serif; font-weight: 100; font-style: normal;" class="py-5 w-[60%] text-left" type="text" placeholder="Email Address">
-        <a href="#" class="bg-[#BD4F0A] px-5 py-5 rounded-full">Sign Up</a>
+        <input style="font-family: degular, sans-serif; font-weight: 100; font-style: normal;" class="py-5 w-[60%] text-left text-black input" type="text" placeholder="Email Address">
+        <a href="#" class="bg-[#BD4F0A] px-5 py-5 rounded-full sign-up">Sign Up</a>
       </div>
     </div>
 
@@ -250,15 +245,15 @@
     window.addEventListener("scroll", fashionSlider);
 
     // Footer Email Authenification
-      let input = document.querySelector("input");
-      let register = document.querySelector('.register-button');
+      let input = document.querySelector(".input");
+      let signUp = document.querySelector('.sign-up');
 
-      register.addEventListener('click', function () {
-        if (input.value.includes("@")) {
+      signUp.addEventListener('click', function () {
+        if (input.value.includes("@") && input.value.includes(".com")) {
           alert('Thank you for registering.')
           input.value = ""
-        } else if (input.value != '@') {
-          alert('Please provide @ to submit request.')
+        } else if (input.value != '@' && input.value != '.com') {
+          alert('Please provide an proper email like domain@gmail.com.')
           input.value = ""
         }
       })
