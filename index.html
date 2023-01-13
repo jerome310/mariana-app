@@ -159,12 +159,12 @@
     </div>
 
     <div class=" w-[100%] flex flex-wrap justify-center my-16">
-      <div class="col-group mx-2.5 mb-2.5">
-        <img data-mdb-target="#exampleModal" onmouseover="triggerModal()" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
+      <div class="col-group mx-2.5 mb-2.5 gallery">
+        <img data-mdb-target="#exampleModal" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
           src="/img/gallery_img_one.jpeg" alt="woman on pillow">
       </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
+      <div class="col-group mx-2.5 mb-2.5 gallery">
+        <img data-mdb-target="#exampleModal" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
           src="/img/gallery_img_two.jpeg" alt="yellow shoes">
       </div>
       <div class="col-group mx-2.5 mb-2.5">
@@ -232,15 +232,15 @@
       <div class="modal-dialog ">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Orange Long Jacket</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Orange Long Coat</h5>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">Woman wearing are latest orange trench cloat</div>
+          <div class="modal-body">Buy our latest orange coat</div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
               Close
             </button>
-            <button type="button" class="btn btn-primary">Add to cart</button>
+            <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">Add to cart</button>
           </div>
         </div>
       </div>
@@ -260,7 +260,7 @@
             <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
               Close
             </button>
-            <button type="button" class="btn btn-primary">Add to cart</button>
+            <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">Add to cart</button>
           </div>
         </div>
       </div>
@@ -325,11 +325,17 @@
     })
 
     // Modal hover feature
-    function triggerModal(){
-      const myModalEl = document.getElementById('exampleModal');
-      const modal = new mdb.Modal(myModalEl);
-      modal.toggle();
-      }
+    let imageGallery = document.querySelectorAll('.gallery');
+
+    imageGallery.forEach((images => {
+      images.onmouseover =  function triggerModal() {
+          const myModalEl = document.getElementById('exampleModal');
+          const modal = new mdb.Modal(myModalEl);
+          modal.toggle();
+          console.log(images)
+        }
+    }))
+
   </script>
 </body>
 
