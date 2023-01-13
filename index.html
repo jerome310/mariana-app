@@ -159,12 +159,12 @@
     </div>
 
     <div class=" w-[100%] flex flex-wrap justify-center my-16">
-      <div class="col-group mx-2.5 mb-2.5">
-        <img data-mdb-target="#exampleModal" onmouseover="triggerModal()" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
+      <div class="col-group mx-2.5 mb-2.5 image-list">
+        <img data-mdb-target=".image" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
           src="/img/gallery_img_one.jpeg" alt="woman on pillow">
       </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
+      <div class="col-group mx-2.5 mb-2.5 image-list">
+        <img data-mdb-target=".image" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
           src="/img/gallery_img_two.jpeg" alt="yellow shoes">
       </div>
       <div class="col-group mx-2.5 mb-2.5">
@@ -227,12 +227,12 @@
 
     <!-- Bootstrap HTML -->
     <!-- Modal One -->
-    <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal top fade image" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
       data-mdb-backdrop="true" data-mdb-keyboard="true">
       <div class="modal-dialog ">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Long Orange Coat</h5>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">Woman wearing are latest orange trench cloat</div>
@@ -247,7 +247,7 @@
     </div>
     
     <!-- Modal Two -->
-    <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal top fade image" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
       data-mdb-backdrop="true" data-mdb-keyboard="true">
       <div class="modal-dialog ">
         <div class="modal-content">
@@ -325,11 +325,23 @@
     })
 
     // Modal hover feature
-    function triggerModal(){
-      const myModalEl = document.getElementById('exampleModal');
-      const modal = new mdb.Modal(myModalEl);
-      modal.toggle();
-      }
+    let imageGallery = document.querySelectorAll('.image-list');
+    imageGallery.forEach((images) => {
+      images.onmouseover = function triggerModal(){
+        const myModalEl = document.querySelector('.image');
+        const modal = new mdb.Modal(myModalEl);
+        modal.toggle();
+        }
+    })
+
+    //let imageGallery = document.querySelectorAll('.image-list');
+    //imageGallery.forEach((images) => {
+      //images.onmouseover = function triggerModal(){
+        //const myModalEl = document.querySelectorAll('.image');
+       // const modal = myModalEl.toggle();
+        
+        //}
+    //})
   </script>
 </body>
 
