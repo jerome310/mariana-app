@@ -23,6 +23,7 @@
   <!-- Bootstrap CSS Link -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
   <!-- Bootstrap Javascript Link -->
+  <!-- MDB -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
   <style>
     .hero-text {
@@ -158,7 +159,7 @@
     </div>
 
     <div class=" w-[100%] flex flex-wrap justify-center my-16">
-      <div class="col-group mx-2.5 mb-2.5 image-list example">
+      <div class="col-group mx-2.5 mb-2.5 image-list">
         <img data-mdb-target=".image" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
           src="/img/gallery_img_one.jpeg" alt="woman on pillow">
       </div>
@@ -226,7 +227,7 @@
 
     <!-- Bootstrap HTML -->
     <!-- Modal One -->
-    <div class="modal top fade modal" id="exampleModalOne" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal top fade image" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
       data-mdb-backdrop="true" data-mdb-keyboard="true">
       <div class="modal-dialog ">
         <div class="modal-content">
@@ -246,7 +247,7 @@
     </div>
     
     <!-- Modal Two -->
-    <div class="modal top fade modal" id="exampleModalTwo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
       data-mdb-backdrop="true" data-mdb-keyboard="true">
       <div class="modal-dialog ">
         <div class="modal-content">
@@ -326,24 +327,21 @@
     // Modal hover feature
     let imageGallery = document.querySelectorAll('.image-list');
     imageGallery.forEach((images) => {
-      images.onmouseover = function triggerModal() {
-        let myModalEl = document.querySelectorAll('.modal');
-        myModalEl.forEach((picture) => {
-          //const modal = document.getElementById(`modal${picture.slice(-1)}`);
-          console.log()
-        const modal = new mdb.Modal(picture);
+      images.onmouseover = function triggerModal(){
+        //let holder = [''];
+        let myModalEl = document.querySelector('.image');
+        const modal = new mdb.Modal(myModalEl);
         modal.toggle();
-        })
-      // } function triggerModal(){
-      //   let myModalEl = document.querySelectorAll('.modal');
-      //   myModalEl.forEach((picture) => {
-      //     let pictures = picture
-      //     console.log(pictures)
-      //   })
+        //myModalEl.forEach((picture) => {
+        
+        
+          //const arrayValue = holder.splice(2)
+          //console.log(arrayValue);
+          
+        //})
+       
         }
     })
-
-    
 
     //let imageGallery = document.querySelectorAll('.image-list');
     //imageGallery.forEach((images) => {
