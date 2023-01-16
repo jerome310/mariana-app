@@ -158,7 +158,7 @@
     </div>
 
     <div class=" w-[100%] flex flex-wrap justify-center my-16">
-      <div class="col-group mx-2.5 mb-2.5 image-list">
+      <div class="col-group mx-2.5 mb-2.5 image-list example">
         <img data-mdb-target=".image" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
           src="/img/gallery_img_one.jpeg" alt="woman on pillow">
       </div>
@@ -226,7 +226,7 @@
 
     <!-- Bootstrap HTML -->
     <!-- Modal One -->
-    <div class="modal top fade modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal top fade modal" id="exampleModalOne" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
       data-mdb-backdrop="true" data-mdb-keyboard="true">
       <div class="modal-dialog ">
         <div class="modal-content">
@@ -246,7 +246,7 @@
     </div>
     
     <!-- Modal Two -->
-    <div class="modal top fade modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal top fade modal" id="exampleModalTwo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
       data-mdb-backdrop="true" data-mdb-keyboard="true">
       <div class="modal-dialog ">
         <div class="modal-content">
@@ -326,17 +326,24 @@
     // Modal hover feature
     let imageGallery = document.querySelectorAll('.image-list');
     imageGallery.forEach((images) => {
-      images.onmouseover = function triggerModal(){
+      images.onmouseover = function triggerModal() {
         let myModalEl = document.querySelectorAll('.modal');
         myModalEl.forEach((picture) => {
-          console.log(picture)
-          picture.onmouseover = function(){
-            new mdb.Modal(picture);
-            modal.toggle();
-          }
+          //const modal = document.getElementById(`modal${picture.slice(-1)}`);
+          console.log()
+        const modal = new mdb.Modal(picture);
+        modal.toggle();
         })
+      // } function triggerModal(){
+      //   let myModalEl = document.querySelectorAll('.modal');
+      //   myModalEl.forEach((picture) => {
+      //     let pictures = picture
+      //     console.log(pictures)
+      //   })
         }
     })
+
+    
 
     //let imageGallery = document.querySelectorAll('.image-list');
     //imageGallery.forEach((images) => {

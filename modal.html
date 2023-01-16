@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: flex;
+}
+
+.card {
+  position: relative;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="/img/gallery_img_one.jpeg" id="img1" class="card-image">
+            <div class="modal" id="modal1">
+                <p>Modal content for image 1</p>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img  src="/img/gallery_img_two.jpeg" id="img2" class="card-image">
+            <div class="modal" id="modal2">
+                <p>Modal content for image 2</p>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img  src="/img/gallery_img_three.jpeg" id="img3" class="card-image">
+            <div class="modal" id="modal3">
+                <p>Modal content for image 3</p>
+            </div>
+        </div>
+    </div>
+<script>
+    const images = document.querySelectorAll('.card-image');
+        const modals = document.querySelectorAll('.modal');
+
+        images.forEach(image => {
+            image.addEventListener('mouseover', () => {
+                const id = image.id;
+                const modal = document.getElementById(`modal${id.slice(-1)}`);
+                modal.style.display = 'block';
+            });
+
+            image.addEventListener('mouseout', () => {
+                const id = image.id;
+                const modal = document.getElementById(`modal${id.slice(-1)}`);
+                modal.style.display = 'none';
+            });
+        });
+
+</script>
+</body>
+</html>
