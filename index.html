@@ -157,48 +157,8 @@
       </p>
     </div>
 
-    <div class=" w-[100%] flex flex-wrap justify-center my-16">
-      <div class="col-group mx-2.5 mb-2.5 image-list example">
-        <img data-mdb-target=".image" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_one.jpeg" alt="woman on pillow">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5 image-list">
-        <img data-mdb-target=".image" style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_two.jpeg" alt="yellow shoes">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_three.jpeg" alt="heels inside plant">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_four.jpeg" alt="woman on couch holding red heels">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_five'.jpeg" alt="heels with blue background">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_six.jpeg" alt="woman in yellow dress">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          style="object-position: 50% 50%; object-fit: cover;" class="w-[300px] h-[450px]"
-          src="/img/gallery_img_seven.jpeg" alt="fruits and heels">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_eight.jpeg" alt="woman with long hair">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_nine.jpeg" alt="long red pants">
-      </div>
-      <div class="col-group mx-2.5 mb-2.5">
-        <img style="object-position: 50% 50%; object-fit: cover;" class="w-[250px] h-[400px]"
-          src="/img/gallery_img_ten.jpeg" alt="red heels">
-      </div>
+    <div class=" w-[100%] flex flex-wrap justify-center my-16 image-container">
+    <!--images-->
     </div>
 
     <div class="bg-[#023120] lg:py-16 flex flex-col lg:flex-row justify-center">
@@ -226,8 +186,7 @@
 
     <!-- Bootstrap HTML -->
     <!-- Modal One -->
-    <div class="modal top fade modal" id="exampleModalOne" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-      data-mdb-backdrop="true" data-mdb-keyboard="true">
+    <div class="example-modal" id="exampleModalOne">
       <div class="modal-dialog ">
         <div class="modal-content">
           <div class="modal-header">
@@ -246,24 +205,24 @@
     </div>
     
     <!-- Modal Two -->
-    <div class="modal top fade modal" id="exampleModalTwo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-      data-mdb-backdrop="true" data-mdb-keyboard="true">
-      <div class="modal-dialog ">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Yellow Boots</h5>
-            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">Purchase are latest high top boots</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Add to cart</button>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--    <div class="modal top fade modal" id="exampleModalTwo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"-->
+<!--      data-mdb-backdrop="true" data-mdb-keyboard="true">-->
+<!--      <div class="modal-dialog ">-->
+<!--        <div class="modal-content">-->
+<!--          <div class="modal-header">-->
+<!--            <h5 class="modal-title" id="exampleModalLabel">Yellow Boots</h5>-->
+<!--            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>-->
+<!--          </div>-->
+<!--          <div class="modal-body">Purchase are latest high top boots</div>-->
+<!--          <div class="modal-footer">-->
+<!--            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">-->
+<!--              Close-->
+<!--            </button>-->
+<!--            <button type="button" class="btn btn-primary">Add to cart</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
   </div>
 
@@ -323,25 +282,46 @@
       }
     })
 
+    for (let x = 1; x < 10; x++) {
+      let imgEl = document.createElement("img");
+      imgEl.setAttribute("src", `/img/gallery_img_${x}.jpeg`);
+      imgEl.setAttribute("class", "w-[250px] h-[400px] object-cover object-center image");
+      let imgList = document.createElement("div");
+      imgList.setAttribute("class", "col-group mx-2.5 mb-2.5 image-list example");
+      imgList.appendChild(imgEl);
+      let container = document.querySelector(".image-container");
+      container.appendChild(imgList);
+    }
+
+    let allImages = document.querySelectorAll('.image');
+    for(let i = 0; i < allImages.length; i++){
+      allImages[i].addEventListener('mouseover', () => {
+        document.querySelector('.example-modal').style.display = "block";
+      });
+      allImages[i].addEventListener('mouseleave', () => {
+        document.querySelector('.example-modal').style.display = "none";
+      });
+    }
+
     // Modal hover feature
-    let imageGallery = document.querySelectorAll('.image-list');
-    imageGallery.forEach((images) => {
-      images.onmouseover = function triggerModal() {
-        let myModalEl = document.querySelectorAll('.modal');
-        myModalEl.forEach((picture) => {
-          //const modal = document.getElementById(`modal${picture.slice(-1)}`);
-          console.log()
-        const modal = new mdb.Modal(picture);
-        modal.toggle();
-        })
+    // let imageGallery = document.querySelectorAll('.image-list');
+    // imageGallery.forEach((images) => {
+    //   images.onmouseover = function triggerModal() {
+    //     let myModalEl = document.querySelectorAll('.modal');
+    //     myModalEl.forEach((picture) => {
+    //       //const modal = document.getElementById(`modal${picture.slice(-1)}`);
+    //       console.log()
+    //     const modal = new mdb.Modal(picture);
+    //     modal.toggle();
+    //     })
       // } function triggerModal(){
       //   let myModalEl = document.querySelectorAll('.modal');
       //   myModalEl.forEach((picture) => {
       //     let pictures = picture
       //     console.log(pictures)
       //   })
-        }
-    })
+      //   }
+    // })
 
     
 
