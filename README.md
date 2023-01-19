@@ -6,13 +6,14 @@ Add script in HTML boilerplate `<script defer src="https://unpkg.com/alpinejs@3.
 ### Tailwind CLI Installation Steps
 ```
 npm install -D tailwindcss
+```
+```
 npx tailwindcss init
 ```
 
 ### npx tailwindcss init
 ```
-Create a tailwind.config.js file 
-```
+Create a "tailwind.config.js" file and add ⬇️ 
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -23,19 +24,16 @@ module.exports = {
   plugins: [],
 }
 ```
-
 ### Create a tailwind.css folder with these inside
 ```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
-
-### Index.html link
+### index.html file link
 ```
 `<link rel="stylesheet" href="/css/style.css" />`
  ```
-
 ### Run this tailwind watch command to spin up your tailwind
 ```
 npx tailwindcss -i ./tailwind.css -o ./css/style.css --watch
