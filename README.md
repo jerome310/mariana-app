@@ -24,16 +24,16 @@ module.exports = {
 }
 ```
 
-Create a tailwind.css folder with these inside
+### Create a tailwind.css folder with these inside
 ```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-Run this tailwind watch command to spin up your tailwind
+### Run this tailwind watch command to spin up your tailwind
 ```
-### npx tailwindcss -i ./tailwind.css -o ./css/style.css --watch
+npx tailwindcss -i ./tailwind.css -o ./css/style.css --watch
 ```
 
 Enjoy :palm_tree:
