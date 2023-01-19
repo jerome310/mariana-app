@@ -11,7 +11,7 @@ npx tailwindcss init
 
 ### npx tailwindcss init
 ```
-### Create a tailwind.config.js file 
+Create a tailwind.config.js file 
 ```
 
 /** @type {import('tailwindcss').Config} */
@@ -22,10 +22,9 @@ module.exports = {
   },
   plugins: [],
 }
-
 ```
 
-### Create a tailwind.css folder with these inside
+Create a tailwind.css folder with these inside
 ```
 @tailwind base;
 @tailwind components;
