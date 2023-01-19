@@ -12,6 +12,7 @@ npx tailwindcss init
 ### npx tailwindcss init
 ```
 ### Create a tailwind.config.js file 
+```
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
