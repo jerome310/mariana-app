@@ -6,6 +6,7 @@ Add script in HTML boilerplate `<script defer src="https://unpkg.com/alpinejs@3.
 ### Tailwind CLI Installation Steps
 ```
 npm install -D tailwindcss
+```
 npx tailwindcss init
 ```
 
