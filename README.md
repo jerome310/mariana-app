@@ -31,6 +31,10 @@ module.exports = {
 @tailwind utilities;
 ```
 
+### Index.html link
+```
+ <link rel="stylesheet" href="/css/style.css" />
+
 ### Run this tailwind watch command to spin up your tailwind
 ```
 npx tailwindcss -i ./tailwind.css -o ./css/style.css --watch
