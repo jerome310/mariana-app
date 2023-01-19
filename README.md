@@ -5,8 +5,9 @@
 
 ### Tailwind CLI Installation Steps
 ```
-### npm install -D tailwindcss
-### npx tailwindcss init
+npm install -D tailwindcss
+```
+npx tailwindcss init
 ```
 
 ### npx tailwindcss init
