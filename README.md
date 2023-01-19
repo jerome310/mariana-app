@@ -34,6 +34,7 @@ module.exports = {
 ### Index.html link
 ```
  <link rel="stylesheet" href="/css/style.css" />
+ ```
 
 ### Run this tailwind watch command to spin up your tailwind
 ```
