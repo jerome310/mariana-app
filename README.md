@@ -11,6 +11,9 @@ npm install -D tailwindcss
 npx tailwindcss init
 ```
 
+npx init -y
+```
+
 ### npx tailwindcss init
 ```
 Create a "tailwind.config.js" file and add ⬇️ 
