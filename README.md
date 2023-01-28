@@ -5,13 +5,13 @@ Add script in HTML boilerplate `<script defer src="https://unpkg.com/alpinejs@3.
 
 ### Tailwind CLI Installation Steps
 ```
+npx init -y
+```
+```
 npm install -D tailwindcss
 ```
 ```
 npx tailwindcss init
-```
-
-npx init -y
 ```
 
 ### npx tailwindcss init
@@ -39,7 +39,7 @@ module.exports = {
  ```
 ### Run this tailwind watch command to spin up your tailwind
 ```
-npx tailwindcss -i ./tailwind.css -o ./css/style.css --watch
+npx tailwindcss -i tailwind.css -o ./css/style.css --watch
 ```
 
 Enjoy :palm_tree:
